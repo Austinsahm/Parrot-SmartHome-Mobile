@@ -1,0 +1,113 @@
+.bg {
+  height: 100%;
+  background: rgb(56, 53, 206);
+  display: flex;
+  justify-content: center;
+}
+
+.img {
+  width: 15rem;
+}
+
+.login-top {
+  // border: 2px solid red;
+  width: 98%;
+  height: 40%;
+  display: flex;
+  justify-content: center;
+}
+
+.login-card {
+  // border: 2px solid white;
+  width: 98%;
+  height: 60%;
+  margin: 0px;
+  bottom: 0px !important;
+  position: absolute;
+  border-radius: 30px 30px 0px 0px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  // display: flex;
+  // justify-content: center;
+  padding: 5%;
+}
+
+.login-text {
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 12%;
+}
+
+.login-input {
+  // border: 1px solid black
+}
+
+.engrave {
+  // border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  color: #f1f1f1;
+}
+
+// .form-section {
+//   height: 60%;
+// }
+
+.header-text {
+  font-size: 2.5rem;
+}
+
+// .content {
+//   display: grid;
+//   justify-items: center;
+//   border-radius: 10px 10px 0px 0px;
+//   box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+// }
+
+// .margin-vertical {
+//   margin: 12%;
+//   width: 90%;
+//   outline: 2px salmon;
+// }
+
+// .margin-top {
+//   margin-top: 30px;
+// }
+
+// .item-space {
+//   padding: 0px !important;
+// }
+
+// ion-input.custom {
+//   border-bottom: 1px solid #8f8888;
+//   --color: #000;
+//   --placeholder-color: #000;
+//   --placeholder-opacity: 0.8;
+
+//   --padding-bottom: 10px;
+//   --padding-end: 10px;
+//   --padding-start: 10px;
+//   --padding-top: 10px;
+//   margin: 10px 0px;
+// }
+
+// .input-item {
+//   --border-width: 0px;
+//   --border-style: none;
+// }
+
+// ion-icon {
+//   border-bottom: 1px solid #8f8888;
+// }
+
+// ion-icon.icon-border {
+//   border-bottom: 1px solid #8f8888;
+//   padding-bottom: 1rem;
+//   --padding-bottom: 20px;
+//   --padding-end: 10px;
+//   --padding-start: 10px;
+//   --padding-top: 10px;
+//   margin: 20px 0px;
+// }

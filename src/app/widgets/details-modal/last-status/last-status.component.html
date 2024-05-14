@@ -1,0 +1,51 @@
+<ion-header mode="ios">
+  <ion-toolbar>
+    <ion-title>Last Status</ion-title>
+    <ion-buttons slot="start">
+      <!-- <ion-button color="medium" (click)="cancel()">Cancel</ion-button> -->
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding" style="background: black">
+  <ng-container>
+    <div style="padding: 10px 0px">
+      <app-empty-data
+        template="No data available"
+        text="Last status not available this time"
+        *ngIf="!lastStatusData.length"
+      ></app-empty-data>
+      <div *ngIf="lastStatusData.length">
+        <table
+          class="table ion-padding"
+          style="
+            box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px,
+              rgba(0, 0, 0, 0.24) 0px 1px 2px;
+          "
+        >
+          <thead>
+            <tr
+              style="
+                background-color: #223991;
+                font-size: 14px;
+                color: white;
+                font-family: Poppins-Light !important;
+              "
+            >
+              <th class="ion-text-center">Name</th>
+              <th class="ion-text-center">Level</th>
+              <th class="ion-text-center">Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of lastStatusData" style="font-size: 12px">
+              <td class="ion-text-center">{{ item.data }}</td>
+              <td class="ion-text-center">{{ item.value }}</td>
+              <td class="ion-text-center">{{ item.date | date : "medium" }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </ng-container>
+</ion-content>

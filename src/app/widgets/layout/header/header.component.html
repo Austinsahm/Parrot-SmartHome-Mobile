@@ -1,0 +1,79 @@
+<ng-container *ngIf="user$ | async as user">
+  <ion-header [translucent]="true" class="ion-no-border">
+    <ion-toolbar
+      class="header"
+      style="
+        background-color: #f1f1f1 !important;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+          rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+      "
+    >
+      <ion-buttons slot="flex-start" *ngIf="back" class="back">
+        <ion-back-button defaultHref="home"></ion-back-button>
+      </ion-buttons>
+
+      <div class="nav-item" style="width: auto">
+        <!-- <ion-avatar class="border">
+          <img width="40px" height="40px" alt="company" [src]="user.logo" />
+        </ion-avatar>
+        <ion-text>Hi, {{ user.firstName }}</ion-text> -->
+
+        <ion-chip style="background-color: ghostwhite; height: 35px">
+          <ion-avatar>
+            <img alt="company" [src]="user.logo" />
+          </ion-avatar>
+          <ion-label>Hi, {{ user.firstName }}</ion-label>
+        </ion-chip>
+      </div>
+      <div slot="end">
+        <div style="display: flex">
+          <ion-button color="light" fill="clear" size="small">
+            <ion-icon src="/assets/icon/notify.svg"></ion-icon>
+          </ion-button>
+
+          <ion-button
+            color="light"
+            fill="clear"
+            size="small"
+            id="popover-button"
+            style="background: transparent !important"
+            ><ion-icon name="menu-outline"></ion-icon
+          ></ion-button>
+          <ion-popover trigger="popover-button" [dismissOnSelect]="true">
+            <ng-template>
+              <ion-content>
+                <ion-list>
+                  <ion-item [button]="true" [detail]="false" (click)="settings()">About</ion-item>
+                  <ion-item [button]="true" [detail]="false" (click)="logOut()"
+                    >Logout</ion-item
+                  >
+                  <!-- <ion-item [button]="true" id="nested-trigger"
+                    >More options...</ion-item
+                  >
+
+                  <ion-popover
+                    trigger="nested-trigger"
+                    [dismissOnSelect]="true"
+                    side="end"
+                  >
+                    <ng-template>
+                      <ion-content>
+                        <ion-list>
+                          <ion-item [button]="true" [detail]="false"
+                            >Nested option</ion-item
+                          >
+                        </ion-list>
+                      </ion-content>
+                    </ng-template>
+                  </ion-popover> -->
+                </ion-list>
+              </ion-content>
+            </ng-template>
+          </ion-popover>
+        </div>
+      </div>
+
+      <!-- <ion-progress-bar type="indeterminate"></ion-progress-bar> -->
+    </ion-toolbar>
+  </ion-header>
+</ng-container>

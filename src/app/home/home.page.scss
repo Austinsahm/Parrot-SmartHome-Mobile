@@ -1,0 +1,57 @@
+.background {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: #fff;
+  padding-right: 2%;
+  padding-left: 2%;
+}
+.border {
+  border: 1px solid red;
+  margin: 0 5px;
+}
+
+.main-text {
+  color: #ffffff;
+  font-size: 23px;
+  font-weight: 500;
+}
+
+.cardContainer {
+  display: flex;
+  width: 92%;
+  margin: 0.3em auto;
+}
+
+.cardText {
+  font-size: 14px;
+  font-weight: 500;
+  margin: 0.7em 0em;
+  color: #14014a;
+}
+
+.deviceHeaderText {
+  font-size: 16px;
+  font-weight: 800px;
+  color: #14014a;
+  margin: 0px;
+  padding-bottom: 18px;
+}
+
+.section {
+  margin: 0em 1.5em;
+}
+
+ion-card-header.ios {
+  display: flex;
+  // flex-flow: column-reverse;
+}
+
+ion-card {
+  margin-inline: 0px !important;
+}
+
+.detailsBtn {
+  float: left;
+}
+

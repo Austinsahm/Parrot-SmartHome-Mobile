@@ -1,0 +1,54 @@
+.deviceContainer{
+  color: #000000;
+  width:100%;
+  padding:0.2em 1.5em;
+}
+
+.headerText{
+  font-size: 23px;
+  color:#160638;
+}
+
+.circle {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  padding-top: 15px;
+  background: #fff;
+  background:#D9D9D9;
+  color: #000;
+  text-align: center;
+  font-weight: bold;
+  font: 18px Arial, sans-serif;
+}
+
+.textColor{
+  color:#10032D;
+}
+
+.deviceContent{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom:10px;
+  border-bottom: 1px solid #b3afaf;
+}
+
+.activeIcon{
+  color:green;
+  text-align:right;
+  font-weight: 500;
+}
+
+.mainText{
+  font-weight: bold;
+  font-size: 17px;
+  margin:0px;
+  padding:5px 0px;
+}
+
+.subText{
+  color:#10032D;
+  font-weight: 400;
+  font-size: 16px;
+}

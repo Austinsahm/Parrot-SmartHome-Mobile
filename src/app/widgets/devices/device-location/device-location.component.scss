@@ -1,0 +1,43 @@
+.map-container {
+    position: static;
+    height: 88vh;
+  }
+  
+  .maps {
+    height: 100%;
+    background-color: transparent;
+    opacity: 0;
+    transition: opacity 150ms ease-in;
+  }
+  
+  .maps.visible {
+    opacity: 1;
+  }
+  
+  // .pano {
+  //   position: absolute;
+  //   bottom: 2px;
+  //   left: 5%;
+  //   z-index: 5;
+  //   // padding: 5px;
+  //   text-align: center;
+  //   line-height: 30px;
+  // }
+  
+  .pano{
+    // position: absolute;
+    top: 18px;
+    left: 1%;
+    z-index: 5;
+    padding: 5px;
+    text-align: center;
+    font-weight: 500;
+    line-height: 30px;
+    // background-color: #ffffff;
+    border-radius: 5px;
+  }
+
+  .pano button{
+    padding: 8px !important;
+    border-radius: 5px;
+  }

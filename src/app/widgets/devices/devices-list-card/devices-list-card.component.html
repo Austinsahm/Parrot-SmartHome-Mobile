@@ -1,0 +1,16 @@
+<div class="deviceContainer">
+  <ion-row class="deviceContent">
+    <ion-col size="3">
+      <div class="circle">{{tag}}</div>
+    </ion-col>
+    <ion-col size="5" class="textContent">
+      <p class="textColor mainText">{{deviceName}} </p>
+      <span class="subText">{{deviceTime}}</span>
+    </ion-col>
+    <ion-col size="4" class="ionCont">
+      <ion-toggle color="dark" [checked]="true" class="no-padding"></ion-toggle>
+      <p class="subText">{{deviceDate}}</p>
+    </ion-col>
+  </ion-row>
+</div>
+

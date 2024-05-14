@@ -1,0 +1,7 @@
+{
+  "name": "Parrot Home",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

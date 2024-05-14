@@ -1,0 +1,29 @@
+<app-header></app-header>
+
+<ion-content *ngIf="assets$|progress|async as assets">
+  <ion-refresher slot="fixed" (ionRefresh)="refresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  <div class="background">
+    <ion-card>
+      <ion-card-content>
+        <ion-list lines="full">
+          <ion-list-header>
+            <ion-label style="margin-top: 0px">Asset Name</ion-label>
+            <ion-label style="margin-top: 0px">Location</ion-label>
+          </ion-list-header>
+          <ion-item
+            *ngFor="let asset of assets.value"
+            routerLink="../{{asset.assetId}}/floor"
+          >
+            <ion-label>{{ asset.assetName }}</ion-label>
+            <ion-label style="font-family: Poppins-Light !important"
+              >{{ asset.location }}</ion-label
+            >
+          </ion-item>
+        </ion-list>
+      </ion-card-content>
+    </ion-card>
+
+  </div>
+</ion-content>

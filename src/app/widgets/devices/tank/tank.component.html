@@ -1,0 +1,15 @@
+<ng-container *ngIf="tanksAsset$">
+  <div class="row">
+    <div
+      class="col-md-6 col-xl-4 mb-4"
+      *ngFor="let dataSource of dataSources; let i = index"
+    >
+      <ng-container>
+          <app-tank-card
+          [dataSource]="dataSource"
+          [deviceIndex]="i"
+          [title]="dataSource.chart.caption"
+          ></app-tank-card>
+      </ng-container>
+    </div></div
+></ng-container>

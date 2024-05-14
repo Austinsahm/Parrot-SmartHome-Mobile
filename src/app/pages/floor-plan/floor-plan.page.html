@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Floor Plan</ion-title>
+    <ion-buttons slot="start">
+      <!-- <ion-button color="medium" (click)="cancel()">Cancel</ion-button> -->
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div id="floorPlan" #floorPlan></div>
+  <ion-accordion-group
+    *ngFor="let device of floorDevices; let i = index"
+    (ionChange)="deviceAttributes(floorDevices[i].attributes)"
+  >                                                 
+    <ion-accordion [value]="device.expanded" 
+    >
+      <ion-item slot="header" color="light">
+        <ion-label>{{ device.deviceName }}</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">
+        <ion-grid *ngFor="let att of deviceAttr">
+          <ion-row>
+            <ion-col>{{ att.attribute }}</ion-col>
+            <ion-col style="font-family: Poppins-Light !important;"
+              >{{ att.attributeValue }}
+              <span *ngIf="att.icon.length"> 
+                <ion-icon
+                  *ngIf="att.icon[0] === 'fas'"
+                  name="{{att.icon[1]}}"
+                  [style]="{ color: att.color }"
+                >
+                </ion-icon>
+                <img
+                  *ngIf="att.icon[0] === ''"
+                  [src]="att.icon[1]"
+                  [ngClass]="{
+                  sig: device.networkName.toLowerCase() === 'sigfox',
+                  humidity: att.icon[1].split('.')[1] === 'svg',
+                  other: device.networkName.toLowerCase() !== 'sigfox'
+                }"
+                style="height: 16px; width: 16px;"
+                /> </span
+            >
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+
+        <ion-button
+          *ngIf="deviceAttr?.length > 1"
+          routerLink="details/{{device.deviceId}}"
+        >
+          <a style="color: white; text-decoration: none;"> view details</a>
+        </ion-button>
+      </div>
+    </ion-accordion>
+  </ion-accordion-group>
+</ion-content>

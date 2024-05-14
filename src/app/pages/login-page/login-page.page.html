@@ -1,0 +1,133 @@
+<!-- <ion-content>
+  <div class="bg">
+
+  </div>
+  <div>
+    <div class="content">
+      <ion-grid class="margin-vertical ion-no-padding">
+        <ion-row class="ion-justify-content-center">
+          <ion-col size-lg="5" size-sm="4">
+            <ion-text class="header-text">Welcome</ion-text>
+          </ion-col>
+        </ion-row>
+
+        <form [formGroup]="formData">
+          <ion-row class="ion-justify-content-center">
+            <ion-col size-lg="5" size-sm="4">
+              <ion-item class="ion-no-padding input-item custom">
+                <ion-input
+                  formControlName="userId"
+                  placeholder="Login Id"
+                  autocomplete="name"
+                  class="custom"
+                ></ion-input>
+              </ion-item> </ion-col
+          ></ion-row>
+
+          <ion-row
+            ><ion-col>
+              <ion-item class="ion-no-padding input-item custom">
+                <ion-input
+                  formControlName="password"
+                  [type]="inputType"
+                  class="custom"
+                  placeholder="Password"
+                ></ion-input
+                ><ion-icon
+                  [name]="icon"
+                  slot="end"
+                  class="icon-border"
+                  (click)="onShowPassword()"
+                ></ion-icon
+              ></ion-item> </ion-col
+          ></ion-row>
+
+          <ion-row
+            ><ion-col>
+              <ion-button
+                class="ion-float-enter margin-top"
+                expand="block"
+                (click)="onSubmit()"
+                [disabled]="formData.invalid"
+                ><ion-spinner name="bubbles" *ngIf="isloading"></ion-spinner>
+                Log In</ion-button
+              >
+            </ion-col>
+          </ion-row>
+        </form>
+      </ion-grid>
+    </div>
+  </div>
+</ion-content> -->
+
+<ion-content>
+  <div class="bg">
+    <div class="login-top">
+      <!-- <ion-img src="/assets/logo2.png" alt="logo" class="img"></ion-img> -->
+      <ion-img src="assets/Asset 10@4x.png" alt="logo" class="img"></ion-img>
+    </div>
+    <ion-card class="login-card">
+      <div
+        style="
+          border: 2px solid rgb(56, 53, 206, 0.05);
+          height: 100%;
+          border-radius: 20px 20px 0px 0px;
+          padding: 2%;
+        "
+      >
+        <div class="login-text">
+          <ion-text class="header-text">Welcome</ion-text>
+        </div>
+        <div class="login-input">
+          <form [formGroup]="formData">
+            <ion-row class="ion-justify-content-center">
+              <ion-col>
+                <ion-item class="ion-no-padding custom">
+                  <ion-input
+                    formControlName="userId"
+                    placeholder="Login Id"
+                    autocomplete="name"
+                    class="custom"
+                  ></ion-input>
+                </ion-item> </ion-col
+            ></ion-row>
+
+            <ion-row
+              ><ion-col>
+                <ion-item class="ion-no-padding custom">
+                  <ion-input
+                    formControlName="password"
+                    [type]="inputType"
+                    class="custom"
+                    placeholder="Password"
+                  ></ion-input
+                  ><ion-icon
+                    [name]="icon"
+                    slot="end"
+                    class="icon-border"
+                    (click)="onShowPassword()"
+                  ></ion-icon
+                ></ion-item> </ion-col
+            ></ion-row>
+
+            <ion-row
+              ><ion-col>
+                <ion-button
+                  class="ion-float-enter"
+                  expand="block"
+                  (click)="onSubmit()"
+                  [disabled]="formData.invalid"
+                  style="background: #3835ce !important"
+                  ><ion-spinner name="bubbles" *ngIf="isloading"></ion-spinner>
+                  Log In</ion-button
+                >
+              </ion-col>
+            </ion-row>
+          </form>
+        </div>
+
+        <div class="engrave">DatanucleusInc &copy; 2023</div>
+      </div>
+    </ion-card>
+  </div>
+</ion-content>

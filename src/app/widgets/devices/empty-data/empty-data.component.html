@@ -1,0 +1,24 @@
+<!-- <div class="center">
+  <div class="emp" *ngIf="!template"><(0',_'0)></div>
+  <div class="custom" *ngIf="template">{{ template }}</div>
+  <div><ion-img src="assets/Cancel.svg" alt="No data"></ion-img></div>
+  <p class="lead" *ngIf="!text">Data not available</p>
+  <p class="lead" *ngIf="text">{{ text }}</p>
+</div> -->
+
+<div style="width: 100%; display: flex; justify-content: center">
+  <ion-img src="assets/Cancel.svg" alt="Icon" style="width: 30%"></ion-img>
+</div>
+<div style="width: 100%">
+  <div style="display: flex; justify-content: center; margin-top: 5%">
+    <!-- <div class="emp" *ngIf="!template"><(0',_'0)></div>
+    <div class="custom" *ngIf="template">{{ template }}</div> -->
+    <div *ngIf="!text">Data not available</div>
+    <div
+      style="font-family: Poppins-Italic !important; font-size: 12px"
+      *ngIf="text"
+    >
+      {{ text }}
+    </div>
+  </div>
+</div>

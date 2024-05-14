@@ -1,0 +1,97 @@
+<ion-header mode="ios">
+  <ion-toolbar>
+    <!-- <ion-title>Device Details</ion-title> -->
+    <ion-buttons slot="start">
+      <!-- <ion-button color="medium" (click)="cancel()">Cancel</ion-button> -->
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding" style="background: black">
+  <!-- <ion-segment value="Last Status" (ionChange)="segmentClick($event)">
+    <ion-segment-button value="Last Status">
+      <ion-label>Last Status</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="Logs">
+      <ion-label>Logs</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="Summarized">
+      <ion-label>Summarized</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+
+  <ng-container *ngIf="segment === 'Last Status'">
+    <div style="padding: 10px 0px">
+      <app-empty-data
+        template="No data available"
+        text="Last status not available this time"
+        *ngIf="!lastStatusData.length"
+      ></app-empty-data>
+      <div *ngIf="lastStatusData.length">
+        <table class="table ion-padding">
+          <thead>
+            <tr>
+              <th class="ion-text-center">Name</th>
+              <th class="ion-text-center">Level</th>
+              <th class="ion-text-center">Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of lastStatusData">
+              <td class="ion-text-center">{{ item.data }}</td>
+              <td class="ion-text-center">{{ item.value }}</td>
+              <td class="ion-text-center">{{ item.date }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </ng-container>
+
+  <ng-container *ngIf="segment === 'Logs'"> logs </ng-container>
+
+  <ng-container *ngIf="segment === 'Summarized'">
+    <div style="padding: 10px 0px">
+      <app-empty-data
+        template="No data available"
+        text="No Charts available this time"
+        *ngIf="!summarizedData.length"
+      ></app-empty-data>
+      <div *ngIf="summarizedData.length">
+        <ng-container *ngFor="let item of summarizedData">
+          <app-line-chart-multiple-sources
+            [summarizedData]="item.data"
+            [title]="item.sensorCategName"
+            [brushes]="chartColours"
+          ></app-line-chart-multiple-sources>
+        </ng-container>
+      </div>
+    </div>
+  </ng-container> -->
+
+  <!-- <ion-tabs >
+    <ion-router-outlet></ion-router-outlet>
+  
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button tab="last-status">
+        <ion-icon name="play-circle"></ion-icon>
+        Listen Now
+      </ion-tab-button>
+      <ion-tab-button tab="logs">
+        <ion-icon name="radio"></ion-icon>
+        Radio
+      </ion-tab-button>
+      <ion-tab-button tab="tsc-summarized">
+        <ion-icon name="library"></ion-icon>
+        Library
+      </ion-tab-button>
+      <ion-tab-button tab="search">
+        <ion-icon name="search"></ion-icon>
+        Search
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs> -->
+  <ion-router-outlet></ion-router-outlet>
+</ion-content>
+
+

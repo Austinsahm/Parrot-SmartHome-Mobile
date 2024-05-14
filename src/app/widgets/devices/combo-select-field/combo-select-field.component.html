@@ -1,0 +1,12 @@
+<ion-list>
+  <ion-item>
+    <ion-select placeholder="Select">
+      <ion-select-option
+        *ngFor="let option of options; trackBy: trackByFn"
+        [value]="option.key"
+        [disabled]="option.disabled"
+        >{{ option.label }}</ion-select-option
+      >
+    </ion-select>
+  </ion-item>
+</ion-list>

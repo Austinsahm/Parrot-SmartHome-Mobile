@@ -1,0 +1,160 @@
+<ion-header mode="ios">
+  <ion-toolbar>
+    <ion-title>Device Details</ion-title>
+    <ion-buttons slot="start">
+      <!-- <ion-button color="medium" (click)="cancel()">Cancel</ion-button> -->
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding" style="background: black">
+  <ion-grid>
+    <ion-row>
+      <ion-col style="display: inline-grid"
+        ><ion-button
+          style="
+            width: 50%;
+            margin: auto;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+            border-radius: 10px;
+          "
+          routerLink="../last-status"
+        >
+          <!-- <ion-icon size="large" name="disc-outline"></ion-icon> -->
+          <ion-icon size="large" name="reader-outline"></ion-icon>
+          <!-- <ion-img src="assets/last-status.svg" alt="last-status"></ion-img> -->
+          <ion-ripple-effect></ion-ripple-effect
+        ></ion-button>
+        <ion-text
+          style="
+            justify-self: center;
+            white-space: nowrap;
+            margin-top: 8px;
+            font-size: x-small;
+          "
+          >Last Status</ion-text
+        >
+      </ion-col>
+      <ion-col style="display: inline-grid"
+        ><ion-button
+          style="
+            width: 50%;
+            margin: auto;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+            border-radius: 10px;
+          "
+          routerLink="../logs"
+          >
+          <!-- <ion-img src="assets/logs.svg" alt="logs"></ion-img> -->
+          <ion-icon size="large" name="compass-outline"></ion-icon>
+          <ion-ripple-effect></ion-ripple-effect
+        ></ion-button>
+        <ion-text
+          style="
+            justify-self: center;
+            white-space: nowrap;
+            margin-top: 8px;
+            font-size: x-small;
+          "
+          >Logs</ion-text
+        >
+      </ion-col>
+      <ion-col style="display: inline-grid"
+        ><ion-button
+          style="
+            width: 50%;
+            margin: auto;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+            border-radius: 10px;
+          "
+          routerLink="../tsc-summarized"
+          ><ion-icon size="large" name="filter-circle-outline"></ion-icon>
+          <ion-ripple-effect></ion-ripple-effect
+        ></ion-button>
+        <ion-text
+          style="
+            justify-self: center;
+            white-space: nowrap;
+            margin-top: 8px;
+            font-size: x-small;
+          "
+          >TSC Summarized</ion-text
+        >
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col style="display: inline-grid"
+        ><ion-button
+          style="
+            width: 50%;
+            margin: auto;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+            border-radius: 10px;
+          "
+          routerLink="../tsc-explicit"
+          ><ion-icon size="large" name="disc-outline"></ion-icon>
+          <ion-ripple-effect></ion-ripple-effect
+        ></ion-button>
+        <ion-text
+          style="
+            justify-self: center;
+            white-space: nowrap;
+            margin-top: 8px;
+            font-size: x-small;
+          "
+          >TSC Explicit</ion-text
+        >
+      </ion-col>
+      <ion-col style="display: inline-grid"
+        ><ion-button
+          style="
+            width: 50%;
+            margin: auto;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+            border-radius: 10px;
+          "
+          routerLink="../static-charts"
+          >
+          <!-- <ion-icon size="large" name="compass-outline"></ion-icon> -->
+          <ion-icon size="large" name="stats-chart-outline"></ion-icon>
+          <!-- <ion-img src="/assets/Static-chart.svg" alt="static-charts"></ion-img> -->
+          <ion-ripple-effect></ion-ripple-effect
+        ></ion-button>
+        <ion-text
+          style="
+            justify-self: center;
+            white-space: nowrap;
+            margin-top: 8px;
+            font-size: x-small;
+          "
+          >Static Charts</ion-text
+        >
+      </ion-col>
+      <ion-col style="display: inline-grid"
+        ><ion-button
+          style="
+            width: 50%;
+            margin: auto;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+            border-radius: 10px;
+          "
+          routerLink="../geolocation"
+          >
+          <!-- <ion-icon size="large" name="filter-circle-outline"></ion-icon> -->
+          <ion-icon size="large" name="location-outline"></ion-icon>
+
+          <ion-ripple-effect></ion-ripple-effect
+        ></ion-button>
+        <ion-text
+          style="
+            justify-self: center;
+            white-space: nowrap;
+            margin-top: 8px;
+            font-size: x-small;
+          "
+          >Geolocation</ion-text
+        >
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

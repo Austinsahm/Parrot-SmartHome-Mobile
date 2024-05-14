@@ -1,0 +1,63 @@
+<ion-header mode="ios">
+  <ion-toolbar>
+    <ion-title>Logs</ion-title>
+    <ion-buttons slot="start">
+      <!-- <ion-button color="medium" (click)="cancel()">Cancel</ion-button> -->
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding" style="background: black">
+  <app-empty-data
+    template="No data available"
+    text="Device history unavailable. Please try again later.   "
+    *ngIf="!loadingHistory && !deviceHistoryData.length"
+  ></app-empty-data>
+  <ng-container *ngIf="!loadingHistory && deviceHistoryData.length">
+    <ion-accordion-group
+      *ngFor="let item of deviceHistoryData"
+      style="
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+          rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+      "
+    >
+      <ion-accordion>
+        <ion-item slot="header" color="light">
+          <ion-label>{{ item.Action }}</ion-label>
+        </ion-item>
+        <div class="ion-padding" slot="content">
+          <ion-row>
+            <ion-text style="font-family: Poppins-medium !important"
+              >Date: &nbsp;</ion-text
+            >
+            <ion-text> {{ item.Date | date : "medium" }} </ion-text>
+          </ion-row>
+          <ion-row>
+            <ion-text style="font-family: Poppins-medium !important"
+              >Data Type: &nbsp;</ion-text
+            >
+            <ion-text> {{ item.Type }} </ion-text>
+          </ion-row>
+          <p style="width: 100%">
+            <!-- <ion-text
+              style="
+                font-family: Poppins-medium !important;
+                display: flex;
+                margin: auto;
+                width: max-content;
+              "
+              >Data</ion-text
+            > -->
+            <ion-row>
+              <ion-text>
+                <ion-row *ngFor="let el of item.Data">
+                  {{ el | titlecase }}
+                </ion-row>
+              </ion-text>
+            </ion-row>
+          </p>
+        </div>
+      </ion-accordion>
+    </ion-accordion-group>
+  </ng-container>
+</ion-content>

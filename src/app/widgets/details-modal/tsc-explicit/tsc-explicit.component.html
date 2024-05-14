@@ -1,0 +1,28 @@
+<ion-header mode="ios">
+  <ion-toolbar>
+    <ion-title>TSC Explicit</ion-title>
+    <ion-buttons slot="start">
+      <!-- <ion-button color="medium" (click)="cancel()">Cancel</ion-button> -->
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding" style="background: black">
+  <ng-container>
+    <div style="padding: 10px 0px">
+      <app-empty-data
+        template="No data available"
+        text="Charts currently unavailable. Please try again later."
+        *ngIf="!singleData?.length"
+      ></app-empty-data>
+      <div *ngIf="singleData?.length">
+        <ng-container *ngFor="let item of singleData">
+          <app-line-chart-single-source
+            [data]="item"
+            [brushes]="chartColours"
+          ></app-line-chart-single-source>
+        </ng-container>
+      </div>
+    </div>
+  </ng-container>
+</ion-content>

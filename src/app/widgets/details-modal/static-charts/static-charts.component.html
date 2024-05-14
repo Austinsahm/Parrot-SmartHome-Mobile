@@ -1,0 +1,25 @@
+<ion-header mode="ios">
+  <ion-toolbar>
+    <ion-title>Static Charts</ion-title>
+    <ion-buttons slot="start">
+      <!-- <ion-button color="medium" (click)="cancel()">Cancel</ion-button> -->
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding" style="background: black">
+  <ng-container>
+    <div style="padding: 10px 0px">
+      <app-empty-data
+        template="No data available"
+        text="No Charts available this time"
+        *ngIf="!staticChartsData.length"
+      ></app-empty-data>
+      <div *ngIf="staticChartsData.length">
+        <ng-container *ngFor="let item of staticChartsData">
+          <app-radial-gauge-chart [data]="item"></app-radial-gauge-chart>
+        </ng-container>
+      </div>
+    </div>
+  </ng-container>
+</ion-content>

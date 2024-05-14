@@ -1,0 +1,27 @@
+
+
+<ion-header mode="ios">
+  <ion-toolbar>
+    <ion-title> Floor </ion-title>
+    <ion-buttons slot="start">
+      <!-- <ion-button color="medium" (click)="cancel()">Cancel</ion-button> -->
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div class="background">
+    <ion-card>
+      <ion-card-content>
+        <ion-list lines="full">
+          <ion-item
+            *ngFor="let floor of floors; let i = index"
+            routerLink="plan/{{ floor.floorPlanId }}"
+          >
+            <ion-label>{{ floor.floorName }}</ion-label>
+          </ion-item>
+        </ion-list></ion-card-content
+      >
+    </ion-card>
+  </div></ion-content
+>
